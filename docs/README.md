@@ -54,22 +54,22 @@ For optimal usage the minimum recommended system requirements are the following:
 
 *   Windows:
 
-*   Windows 11
-*   Windows 10
-*   Windows 7 (Until version 1.31.1)
+    *   Windows 11
+    *   Windows 10
+    *   Windows 7 (Until version 1.31.1)
 
 *   Linux:
 
-*   Ubuntu 18.04
-*   Ubuntu 20.04
-*   Ubuntu 22.04 (Version 1.35.0 and above)
+    *   Ubuntu 18.04
+    *   Ubuntu 20.04
+    *   Ubuntu 22.04 (Version 1.35.0 and above)
 
 *   MacOS:
 
-*   macOS 13 (Ventura)
-*   macOS 12 (Monterey)
-*   macOS 11 (Big Sur)
-*   macOS 10.14 (Mohave) (Until version 1.31.1)
+    *   macOS 13 (Ventura)
+    *   macOS 12 (Monterey)
+    *   macOS 11 (Big Sur)
+    *   macOS 10.14 (Mohave) (Until version 1.31.1)
 
 > [!NOTE]
 >*   For ControlCenter and DataViewer version 1.35.x you need to install following linux packages: _apt install libqt6quickwidgets6 libqt6uitools6_
