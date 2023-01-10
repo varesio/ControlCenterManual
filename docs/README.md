@@ -8,11 +8,8 @@ This document aims to help setting up an evaluation procedure with a Sensor Eval
 
 The software is targeted to application and R&D Engineers who wish to evaluate a Sensirion Sensor within their application.
 
-System Summary
-==============
-
 Technical Terms
----------------
+============
 
 | Term | Explanation |
 | --- | --- |
@@ -37,6 +34,9 @@ Technical Terms
 | SLF | Sensirion Liquid Flow Sensor |
 | LD | Sensirion Single-Use Liquid Flow Sensor |
 
+
+Hardware & System Requirements
+==============
   
 
 Recommended System Requirements
@@ -56,20 +56,20 @@ For optimal usage the minimum recommended system requirements are the following:
 
     *   Windows 11
     *   Windows 10
-    *   Windows 7 (Until version 1.31.1)
+    *   Windows 7 (Latest supported ControlCenter version is 1.31.1, **newer** releases do not support this OS version)
 
 *   Linux:
 
     *   Ubuntu 18.04
-    *   Ubuntu 20.04
-    *   Ubuntu 22.04 (Version 1.35.0 and above)
+    *   Ubuntu 20.048
+    *   Ubuntu 22.04 (First supported ControlCenter version is 1.35.1, **older** releases do not support this OS version)
 
 *   MacOS:
 
     *   macOS 13 (Ventura)
     *   macOS 12 (Monterey)
     *   macOS 11 (Big Sur)
-    *   macOS 10.14 (Mohave) (Until version 1.31.1)
+    *   macOS 10.14 (Mohave) (Latest supported ControlCenter version is 1.31.1, **newer** releases do not support this OS version)
 
 > [!NOTE]
 >*   For ControlCenter and DataViewer version 1.35.x you need to install following linux packages: _apt install libqt6quickwidgets6 libqt6uitools6_
@@ -144,7 +144,7 @@ Sensirion provides a variety of Sensor Evaluation Kits for all the different sen
 Currently the Evaluation Kits are split into two categories:
 
 1.  All-in-one Evaluation Kits with direct USB support 
-2.  Evaluation Kits requiring a SEK-Sensorbridge to communicate with a laptop. More information regarding the SensorBridge can be found in a later section.
+2.  Evaluation Kits requiring a Sensorbridge to communicate with a laptop. More information regarding the SensorBridge can be found in a later section.
 
 The table with the supported sensors above outlines the hardware requirements for the different Sensor Evaluation Kits.
 
@@ -336,7 +336,7 @@ In case you need to transfer a baseline file for a specific SGP sensor to a diff
 
 ### SCD30 (CO2 Sensor)
 
-To evaluate the SCD3x sensor you need to connect an SEK-SCD3x to a SEK-Sensorbridge. Upon connecting the SCD3x you can:
+To evaluate the SCD3x sensor you need to connect an SEK-SCD3x to a Sensorbridge. Upon connecting the SCD3x you can:
 
 -   Choose a custom name for the sensor which will also be displayed in the plot
 -   Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
@@ -383,7 +383,7 @@ The source of truth are always the application notes and the datasheets for the 
 
 ### SCD4x (CO2 Sensor)
 
-To evaluate the SCD4x sensor you need to connect an SEK-SCD4x to a SEK-Sensorbridge. Upon connecting the SCD4x you can:
+To evaluate the SCD4x sensor you need to connect an SEK-SCD4x to a Sensorbridge. Upon connecting the SCD4x you can:
 
 -   Choose a custom name for the sensor which will also be displayed in the plot
 -   Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
