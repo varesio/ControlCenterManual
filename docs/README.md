@@ -83,13 +83,6 @@ The following Sensor Models are supported by the latest Software release:
 
 | Type | Sensor | SensorBridge Required | Version |
 | --- | --- | --- | --- |
-| MOX Gas Sensors | | |   
-| | SGP30 | No |  
-| | SGPC3 | No |   
-| | SGP40 | No |   
-| | SGP41 | No |   
-| Formaldehyde | | |   
-| | SFA3x | No |  
 | Temperature / Humidity 
 | | SHTC1 | Yes |   
 | | SHTC3 | Yes |   
@@ -99,7 +92,12 @@ The following Sensor Models are supported by the latest Software release:
 | | STS3x | Yes |   
 | | STS4x | Yes |   
 | | SHT85 | Yes |   
-| | SHT4x | Yes |   
+| | SHT4x | Yes |
+| MOX Gas Sensors | | |      
+| | SGP40 | No |   
+| | SGP41 | No |   
+| Formaldehyde | | |   
+| | SFA3x | No |  
 | PM2.5 
 | | SPS3x | No | 
 | CO2 | 
@@ -249,11 +247,10 @@ To connect an SEK via USB cable to your computer follow the next steps:
 
 Next to each connected sensor in the device list, there is a green gear button in the 'Config' column. Here you can set the following functionality, if supported by the connected sensors:
 
-**Important:**
-
-**To change the sensor settings or the configuration ControlCenter needs to stop measuring. Please, click the stop button to stop the measurement.**
-
-**An exception to this, are some of the settings of SCD30 which can be adjusted only when the measurement is running**
+> [!Important]
+>* To change the sensor settings or the configuration ControlCenter needs to stop measuring. Please, click the stop button to stop the measurement._
+>    
+>* An exception to this, are some of the settings of SCD30 which can be adjusted only when the measurement is running
 
 ### Humidity (SHT) 
 To evaluate the SHT4x you need to connect an SEK-SHT4x. Upon connecting the SHT4x you can:
@@ -392,7 +389,7 @@ The user can interact with the SCD4x the same way with the SCD3x for the ASC and
 
 Please note:
 
-For AFC and FRC, ControlCenter sends the commands to the sensor and reads the status from it, this means that the behavior is defined by the sensor and not from ControlCenter. You can find more information regarding the behavior in different modes in the [SCD4x Datasheet](https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf) and in the [SCD4x Low Power Operation](https://sensirion.com/media/documents/077BC86F/62BF01B9/CD_AN_SCD4x_Low_Power_Operation_D1.pdf) application note and in the [SCD4x CO2 Sensor Evaluation Kit: Introduction](https://www.youtube.com/watch?v=E-wtyDLzXHY) video.
+For ASC and FRC, ControlCenter sends the commands to the sensor and reads the status from it, this means that the behavior is defined by the sensor and not from ControlCenter. You can find more information regarding the behavior in different modes in the [SCD4x Datasheet](https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf) and in the [SCD4x Low Power Operation](https://sensirion.com/media/documents/077BC86F/62BF01B9/CD_AN_SCD4x_Low_Power_Operation_D1.pdf) application note and in the [SCD4x CO2 Sensor Evaluation Kit: Introduction](https://www.youtube.com/watch?v=E-wtyDLzXHY) video.
 
 ### Particulate Matter (SPS30)
 
@@ -578,7 +575,7 @@ Alternatively you can find the links also here:
 
 If you request any type of additional support please do not hesitate to
 contact us by writing a quick note to
-[info@sensirion.com](mailto:info@sensirion.com) with the topic 'ControlCenter Feedback'.
+[support@sensirion.com](mailto:support@sensirion.com) with the topic 'ControlCenter Feedback'.
 
 # Using DataViewer
 
