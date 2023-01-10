@@ -247,10 +247,11 @@ To connect an SEK via USB cable to your computer follow the next steps:
 
 Next to each connected sensor in the device list, there is a green gear button in the 'Config' column. Here you can set the following functionality, if supported by the connected sensors:
 
-> [!Important]
->* To change the sensor settings or the configuration ControlCenter needs to stop measuring. Please, click the stop button to stop the measurement._
+> [!NOTE]
+>
+> **To change the sensor settings or the configuration ControlCenter needs to stop measuring. Please, click the stop button to stop the measurement.**
 >    
->* An exception to this, are some of the settings of SCD30 which can be adjusted only when the measurement is running
+> **An exception to this, are some of the settings of SCD30 which can be adjusted only when the measurement is running**
 
 ### Humidity (SHT) 
 To evaluate the SHT4x you need to connect an SEK-SHT4x. Upon connecting the SHT4x you can:
