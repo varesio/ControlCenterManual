@@ -168,7 +168,7 @@ SensorBridge Specifications
 *   **USB Virtual Com Port (connector on the right)**  
     This interface offers a fast plug and play option. It is available on every computer and is usually suitable for up to a couple of devices on a normal desktop PC.
 *   **RS485 (connector on the left)**  
-    This interface offers more flexibility in terms of a bus system. Multiple devices can easily be attached to one bus and powered by just one supply. Furthermore, long distances can be achieved by this differential bus interface. To use this, an RS485 interface is required for the computer. The firmware 
+    This interface offers more flexibility in terms of a bus system. Multiple devices can easily be attached to one bus and powered by just one supply. Furthermore, long distances can be achieved by this differential bus interface. To use this, an RS485 interface is required for the computer. 
 
 ###  Connectors used
 
@@ -296,7 +296,7 @@ If you want the temperature offset to be saved permanently on the SVM4x press th
 
 #### Set the tuning parameters for the VOC Index
 
-![](attachments/278673337/282045592.png ':size=40%')
+![](attachments/278673337/282045589.png ':size=40%')
 
 There are different parameters which can be set by the user to influence the behavior of the VOC Algorithm. For each parameter, you can place the cursor on top of the i icon to receive more information about it (incl. default values in case you forget).
 
