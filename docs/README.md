@@ -330,6 +330,7 @@ For more information, please, consult the application note [Sensirion's NOx Inde
 #### Restarting the SVM4x with the new parameters 
 
 ![](attachments/278673337/282045590.png ':size=80%')
+
 In case you need to transfer a baseline file for a specific SGP sensor to a different computer, you can find it here: C:\\Users\\\<username\>\\Local\\Sensirion\\ControlCenter with the file extension '.json'.
 
 ### SCD30 (CO2 Sensor)
