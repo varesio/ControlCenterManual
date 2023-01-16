@@ -1,188 +1,175 @@
-Introduction
-============
+# Introduction
 
-About this document
--------------------
+## About this document
 
 This document aims to help setting up an evaluation procedure with a Sensor Evaluation Kit (SEK) from Sensirion. All available Sensor Evaluation Kits can be found on the [Sensirion website](https://sensirion.com/products/sensor-evaluation/). The document outlines how to get started with the evaluation kit and how to install and use the necessary software.
 
 The software is targeted to application and R&D Engineers who wish to evaluate a Sensirion Sensor within their application.
 
-Technical Terms
-============
+# Technical Terms
 
-| Term | Explanation |
-| --- | --- |
-| SEK | Sensor Evaluation Kit, all available Sensor Evaluation Kits can be found on the [Sensirion website](https://sensirion.com/products/sensor-evaluation/) |
-| SensorBridge | The hardware component used to connect up to two sensors with the software |
-| EDF | proprietary Sensirion file format for logging measurement values. Compatible with csv reading software such as Microsoft Excel |
-| ControlCenter | The Sensor Evaluation Software provided by Sensirion |
-| DataViewer | The sensor log viewing software provided by Sensirion  |
-| VOC Index | The proprietary Sensirion index to measure VOC concentration changes over a period of time. More information can be found [here](https://sensirion.com/media/documents/02232963/6294E043/Info_Note_VOC_Index.pdf) |
-| NOX Index | The proprietary Sensirion index to measure NOX concentration changes over a period of time. More information can be found [here](https://sensirion.com/media/documents/9F289B95/6294DFFC/Info_Note_NOx_Index.pdf) |
-| SHT | Sensirion Humidity and Temperature Sensor |
-| STS | Sensirion Temperature Sensor |
-| SCD | Sensirion CO2 Sensor |
-| STC | Sensirion Thermal Conductivity CO2 Sensor |
-| SVM | Sensirion Evaluation Kit for SGP Sensors |
-| SGP | Sensirion Mox Sensor to measure VOC and NOX  |
-| SFA | Sensirion Formaldehyde Sensor |
-| SPS | Sensirion Particulate Matter (PM2.5) Sensor |
-| SEN | Sensirion Environnmental Module with multiple sensors |
-| SDP | Sensirion Differential Pressure Sensor |
-| SFM | Sensirion Mass Flow Meter |
-| SLF | Sensirion Liquid Flow Sensor |
-| LD | Sensirion Single-Use Liquid Flow Sensor |
+| Term          | Explanation                                                                                                                                                                                                       |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SEK           | Sensor Evaluation Kit, all available Sensor Evaluation Kits can be found on the [Sensirion website](https://sensirion.com/products/sensor-evaluation/)                                                            |
+| SensorBridge  | The hardware component used to connect up to two sensors with the software                                                                                                                                        |
+| EDF           | proprietary Sensirion file format for logging measurement values. Compatible with csv reading software such as Microsoft Excel                                                                                    |
+| ControlCenter | The Sensor Evaluation Software provided by Sensirion                                                                                                                                                              |
+| DataViewer    | The sensor log viewing software provided by Sensirion                                                                                                                                                             |
+| VOC Index     | The proprietary Sensirion index to measure VOC concentration changes over a period of time. More information can be found [here](https://sensirion.com/media/documents/02232963/6294E043/Info_Note_VOC_Index.pdf) |
+| NOX Index     | The proprietary Sensirion index to measure NOX concentration changes over a period of time. More information can be found [here](https://sensirion.com/media/documents/9F289B95/6294DFFC/Info_Note_NOx_Index.pdf) |
+| SHT           | Sensirion Humidity and Temperature Sensor                                                                                                                                                                         |
+| STS           | Sensirion Temperature Sensor                                                                                                                                                                                      |
+| SCD           | Sensirion CO2 Sensor                                                                                                                                                                                              |
+| STC           | Sensirion Thermal Conductivity CO2 Sensor                                                                                                                                                                         |
+| SVM           | Sensirion Evaluation Kit for SGP Sensors                                                                                                                                                                          |
+| SGP           | Sensirion Mox Sensor to measure VOC and NOX                                                                                                                                                                       |
+| SFA           | Sensirion Formaldehyde Sensor                                                                                                                                                                                     |
+| SPS           | Sensirion Particulate Matter (PM2.5) Sensor                                                                                                                                                                       |
+| SEN           | Sensirion Environnmental Module with multiple sensors                                                                                                                                                             |
+| SDP           | Sensirion Differential Pressure Sensor                                                                                                                                                                            |
+| SFM           | Sensirion Mass Flow Meter                                                                                                                                                                                         |
+| SLF           | Sensirion Liquid Flow Sensor                                                                                                                                                                                      |
+| LD            | Sensirion Single-Use Liquid Flow Sensor                                                                                                                                                                           |
 
+# Hardware & System Requirements
 
-Hardware & System Requirements
-==============
-  
-
-Recommended System Requirements
--------------------------------
+## Recommended System Requirements
 
 For optimal usage the minimum recommended system requirements are the following:
 
-*   Intel i5 processor or above
-*   64 bit OS
-*   8 GB of RAM
-*   128 GB Hard Drive
-*   Integrated Graphics or above
+- Intel i5 processor or above
+- 64 bit OS
+- 8 GB of RAM
+- 128 GB Hard Drive
+- Integrated Graphics or above
 
 ### OS Compatibility
 
-*   Windows:
+- Windows:
 
-    *   Windows 11
-    *   Windows 10
-    *   Windows 7 (Latest supported ControlCenter version is 1.31.1, **newer** releases do not support this OS version)
+  - Windows 11
+  - Windows 10
+  - Windows 7 (Latest supported ControlCenter version is 1.31.1, **newer** releases do not support this OS version)
 
-*   Linux:
+- Linux:
 
-    *   Ubuntu 18.04
-    *   Ubuntu 20.048
-    *   Ubuntu 22.04 (First supported ControlCenter version is 1.35.1, **older** releases do not support this OS version)
+  - Ubuntu 18.04
+  - Ubuntu 20.048
+  - Ubuntu 22.04 (First supported ControlCenter version is 1.35.1, **older** releases do not support this OS version)
 
-*   MacOS:
+- MacOS:
 
-    *   macOS 13 (Ventura)
-    *   macOS 12 (Monterey)
-    *   macOS 11 (Big Sur)
-    *   macOS 10.14 (Mohave) (Latest supported ControlCenter version is 1.31.1, **newer** releases do not support this OS version)
+  - macOS 13 (Ventura)
+  - macOS 12 (Monterey)
+  - macOS 11 (Big Sur)
+  - macOS 10.14 (Mohave) (Latest supported ControlCenter version is 1.31.1, **newer** releases do not support this OS version)
 
 > [!NOTE]
->*   For ControlCenter and DataViewer version 1.35.x you need to install following linux packages: _apt install libqt6quickwidgets6 libqt6uitools6_
->    
->*   ARM processors are not supported. The exception is the Apple Mx series of processors which are compatible with ControlCenter. Sensirion does not guarantee that ControlCenter will work with Raspberry Pi devices running Ubuntu Linux OS
+>
+> - For ControlCenter and DataViewer version 1.35.x you need to install following linux packages: _apt install libqt6quickwidgets6 libqt6uitools6_
+>
+> - ARM processors are not supported. The exception is the Apple Mx series of processors which are compatible with ControlCenter. Sensirion does not guarantee that ControlCenter will work with Raspberry Pi devices running Ubuntu Linux OS
 
-Supported Sensors
------------------
+## Supported Sensors
 
 The following Sensor Models are supported by the latest Software release:
 
-| Type | Sensor | SensorBridge Required | Version |
-| --- | --- | --- | --- |
-| Temperature / Humidity 
-| | SHTC1 | Yes |   
-| | SHTC3 | Yes |   
-| | SHTW2 / SHTW2 ALT | Yes |   
-| | STH2x | Yes |   
-| | SHT3x / SHT3x ALT | Yes |   
-| | STS3x | Yes |   
-| | STS4x | Yes |   
-| | SHT85 | Yes |   
-| | SHT4x | Yes |
-| MOX Gas Sensors | | |      
-| | SGP40 | No |   
-| | SGP41 | No |   
-| Formaldehyde | | |   
-| | SFA3x | No |  
-| PM2.5 
-| | SPS3x | No | 
-| CO2 | 
-| | SCD3x | Yes |   
-| | SCD4x | Yes |   
-| Differential pressure 
-| | SDP31 | Yes |   
-| | SDP8xx | Yes |   
-| Gas flow 
-| | SFM3000 | Yes |   
-| | SFM3003 | Yes |   
-| | SFM3019 | Yes |   
-| | SFM3119 | Yes |   
-| | SFM3200 | Yes |   
-| | SFM4100 | Yes |   
-| | SFM4200 | Yes |   
-| | SFM4300 | Yes |   
-| | SFM4311 | Yes |   
-| | SFM3200AW | Yes |   
-| | SFM3300AW | Yes |   
-| | SFM3300D | Yes |   
-| | SFM3400AW | Yes |   
-| | SFM3400D | Yes |   
-| Thermal Conductivity 
-| | STC31 | Yes |   
-| Liquid Flow 
-| | SLF3S | No |   
-| | LD20 | No |   
-| Modules 
-| | SVM3x | No |   
-| | SEN4x | Yes |   
-| | SEN5x | Yes |   
-| | SVM4x | No |   
+| Type                   | Sensor    | SensorBridge Required | Version |
+| ---------------------- | --------- | --------------------- | ------- |
+| Temperature / Humidity |           |                       |         |
+|                        | SHTC1     | Yes                   |         |
+|                        | SHTC3     | Yes                   |         |
+|                        | SHTW2     | Yes                   |         |
+|                        | STH2x     | Yes                   |         |
+|                        | SHT3x     | Yes                   |         |
+|                        | STS3x     | Yes                   |         |
+|                        | STS4x     | Yes                   |         |
+|                        | SHT85     | Yes                   |         |
+|                        | SHT4x     | Yes                   |         |
+| MOX Gas Sensors        |           |                       |         |
+|                        | SGP40     | Yes                   |         |
+|                        | SGP41     | Yes                   |         |
+| Formaldehyde           |           |                       |         |
+|                        | SFA3x     | No                    |         |
+| PM2.5                  |           |                       |         |
+|                        | SPS3x     | No                    |         |
+| CO2                    |           |                       |         |
+|                        | SCD3x     | Yes                   |         |
+|                        | SCD4x     | Yes                   |         |
+| Differential pressure  |           |                       |         |
+|                        | SDP31     | Yes                   |         |
+|                        | SDP8xx    | Yes                   |         |
+| Gas flow               |           |                       |         |
+|                        | SFM3000   | Yes                   |         |
+|                        | SFM3003   | Yes                   |         |
+|                        | SFM3019   | Yes                   |         |
+|                        | SFM3119   | Yes                   |         |
+|                        | SFM3200   | Yes                   |         |
+|                        | SFM4100   | Yes                   |         |
+|                        | SFM4200   | Yes                   |         |
+|                        | SFM4300   | Yes                   |         |
+|                        | SFM4311   | Yes                   |         |
+|                        | SFM3200AW | Yes                   |         |
+|                        | SFM3300AW | Yes                   |         |
+|                        | SFM3300D  | Yes                   |         |
+|                        | SFM3400AW | Yes                   |         |
+|                        | SFM3400D  | Yes                   |         |
+| Thermal Conductivity   |           |                       |         |
+|                        | STC31     | Yes                   |         |
+| Liquid Flow            |           |                       |         |
+|                        | SLF3S     | No                    |         |
+|                        | LD20      | No                    |         |
+| Modules                |           |                       |         |
+|                        | SVM3x     | No                    |         |
+|                        | SEN4x     | Yes                   |         |
+|                        | SEN5x     | Yes                   |         |
+|                        | SVM4x     | No                    |         |
 
-  
-
-Required Hardware
------------------
+## Required Hardware
 
 Sensirion provides a variety of Sensor Evaluation Kits for all the different sensor families and models produced. The variety and heterogeneity of the sensors makes it difficult to provide an all-in-one hardware evaluation infrastructure.
 
 Currently the Evaluation Kits are split into two categories:
 
-1.  All-in-one Evaluation Kits with direct USB support 
-2.  Evaluation Kits requiring a Sensorbridge to communicate with a laptop. More information regarding the SensorBridge can be found in a later section.
+1.  All-in-one Evaluation Kits with direct USB support
+2.  Evaluation Kits requiring a Sensorbridge to communicate with a desktop computer. More information regarding the SensorBridge can be found in a later section.
 
 The table with the supported sensors above outlines the hardware requirements for the different Sensor Evaluation Kits.
 
-SensorBridge Specifications
----------------------------
-![SEK-SensorBridge](images\sensirion-sensorbridge-ad.png ':size=40%')
+## SensorBridge Specifications
+
+![SEK-SensorBridge](images/sensirion-sensorbridge-ad.png ":size=40%")
+
 ### Two Independent Channels Each Offering: 
 
-*   I2C bus with speed up to 1Mhz
-*   SPI bus with CS
-*   1.2V - 5.5V selectable supply
-*   Suitable to deliver up to 250mA @5V
-*   Analogue in pin (0V - 5V)
-*   PWM in pin
-*   Weight with packaging and USB cable: ~140g
+- I2C bus with speed up to 1Mhz
+- SPI bus with CS
+- 1.2V - 5.5V selectable supply
+- Suitable to deliver up to 250mA @5V
+- Analogue in pin (0V - 5V)
+- PWM in pin
+- Weight with packaging and USB cable: ~140g
 
 ### Interface Options
 
- There are two interfaces that can be used. Each implements the SHDLC protocol.
+There are two interfaces that can be used. Each implements the SHDLC protocol.
 
-*   **USB Virtual Com Port (connector on the right)**  
-    This interface offers a fast plug and play option. It is available on every computer and is usually suitable for up to a couple of devices on a normal desktop PC.
-*   **RS485 (connector on the left)**  
-    This interface offers more flexibility in terms of a bus system. Multiple devices can easily be attached to one bus and powered by just one supply. Furthermore, long distances can be achieved by this differential bus interface. To use this, an RS485 interface is required for the computer. 
+- **USB Virtual Com Port (connector on the right)**  
+  This interface offers a fast plug and play option. It is available on every computer and is usually suitable for up to a couple of devices on a normal desktop PC.
+- **RS485 (connector on the left)**  
+  This interface offers more flexibility in terms of a bus system. Multiple devices can easily be attached to one bus and powered by just one supply. Furthermore, long distances can be achieved by this differential bus interface. To use this, an RS485 interface is required for the computer.
 
 ###  Connectors used
 
-1.  **RJ45 (Sensor to Eval Kit)**  
-      
+1.  **RJ45 (Sensor to Eval Kit)**
     There are two RJ45 connectors each offering the following signals:  
-    ![Pinout](attachments/278673337/278678930.png ':size=40%')
+    ![Pinout](attachments/278673337/278678930.png ":size=40%")
 2.  **USB Micro (Eval Kit to Computer)**  
     The USB micro connector is used to do the usual SHDLC communication.  
     [![Bildergebnis für usb micro](https://images-na.ssl-images-amazon.com/images/I/51djySNYPcL._SX522_.jpg)](https://www.amazon.com/amp-USB-Micro-USB-Cable-Ft/dp/B002HMWQE2)
 3.  **JST (RS485) - (Eval Kit to Computer)**  
     The standard RS485 connector offers a robust connection with a lock mechanism. The connector offers the RS485 interface.  
-    [http://media.digikey.com/photos/JST%20Photos/SM04B-GHS-TB(LF)(SN).jpg](http://www.google.ch/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjzqajHt-vPAhUFwxQKHXujDIcQjRwIBw&url=http%3A%2F%2Fwww.digikey.com%2Fproduct-detail%2Fen%2Fjst-sales-america-inc%2FSM04B-GHS-TB(LF)(SN)-%2F455-1566-1-ND%2F807834&psig=AFQjCNEANlLkrkZkAEbv1q-hmJOAuZpUiA&ust=1477123383696065)
-
-
-
+    [http://media.digikey.com/photos/JST%20Photos/SM04B-GHS-TB(LF)(SN).jpg](<http://www.google.ch/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjzqajHt-vPAhUFwxQKHXujDIcQjRwIBw&url=http%3A%2F%2Fwww.digikey.com%2Fproduct-detail%2Fen%2Fjst-sales-america-inc%2FSM04B-GHS-TB(LF)(SN)-%2F455-1566-1-ND%2F807834&psig=AFQjCNEANlLkrkZkAEbv1q-hmJOAuZpUiA&ust=1477123383696065>)
 
 # Getting Started
 
@@ -201,6 +188,7 @@ After installation, ControlCenter can be launched without administrator rights.
 ### Apple MacOS installation
 
 After downloading the dmg files please follow the Installation Wizard and enter the administrator password when prompted by the Wizard. 
+When running the installer, you have to allow executable in the **System Preferences** -> **Security & Privacy** -> **General** tab. Else the installer will not show up.
 
 After installation, ControlCenter can be launched through the applications folder.
 
@@ -208,64 +196,77 @@ After installation, ControlCenter can be launched through the applications folde
 
 The ControlCenter package for Ubuntu comes with a ready to run application. Simply extract the contents of the compressed folder after download and double click on the ControlCenter executable.
 
-Please note that for Ubuntu Linux 22.04 and ControlCenter and DataViewer version 1.35.x you need to install following linux packages: *apt install libqt6quickwidgets6 libqt6uitools6*
+Please note that for Ubuntu Linux 22.04 and ControlCenter and DataViewer version 1.35.x you need to install following linux packages: _apt install libqt6quickwidgets6 libqt6uitools6_
 
-## Connecting a Sensor Evaluation Kit {#Manual-ConnectingaSensorEvaluationKit}
+## Connecting a Sensor Evaluation Kit
 
 There are currently two ways to start evaluating a Sensirion sensor with ControlCenter:
 
--   Connecting a sensor via SensorBridge
--   Connecting a sensor directly via USB cable
+- [Connecting a sensor via SensorBridge](#connecting-an-sek-via-sensorbridge)
+- [Connecting a sensor directly via USB cable](#connecting-an-sek-via-usb)
 
 Which of the two ways depends on the specific evaluation Kit. Please refer to the Required Hardware section of the manual to determine whether or not SensorBridge is required for the evaluation.
 
-### Connecting an SEK via SensorBridge {#Manual-ConnectinganSEKviaSensorBridge}
+### Connecting an SEK via SensorBridge
 
-![](attachments/278673337/282040405.png ':size=40%')
+![](attachments/278673337/282040405.png ":size=40%")
 
 To connect an SEK via SensorBridge to your computer follow the next steps:
 
 1.  Use the adapter cable supplied with your SEK and connect it to the female connector on the evaluation board
 2.  Connect the RJ45 connector of the adapter cable to either of the two RJ45 ports on the SensorBridge
 3.  Use the supplied nano-USB to USB cable to power and connect the SensorBridge to your computer
-4.  Launch ControlCenter 
+4.  Launch ControlCenter
 
+### Connecting an SEK via USB
 
-### Connecting an SEK via USB {#Manual-ConnectinganSEKviaUSB}
-
-![](attachments/278673337/282040404.png ':size=40%')
+![](attachments/278673337/282040404.png ":size=40%")
 
 To connect an SEK via USB cable to your computer follow the next steps:
 
 1.  Use the adapter cable supplied with your SEK and connect it to the female connector on the evaluation board
 2.  Connect the USB connector of the adapter cable to your computer
-3.  Launch ControlCenter 
+3.  Launch ControlCenter
 
 # Using ControlCenter
 
 ## Sensor Configuration and Settings
 
-Next to each connected sensor in the device list, there is a green gear button in the 'Config' column. Here you can set the following functionality, if supported by the connected sensors:
+ControlCenter comes with reasonable default configurations for each sensor to start the sensor evaluation.
+To further customize sensor configuration you can find the sensor settings as a green gear button in the 'Config' column
+next to each connected sensor in the device list.
+
+In the sections below you find the documentation of all available configurations for the following sensors:
+
+- [SHT (Humidity and Temperature)](#humidity-sht)
+- [SVM4x/SGP4x (VOC and NOx)](#voc-and-nox-svm4x)
+- [SCD30 (CO2)](#scd30-co2-sensor)
+- [SCD4x (CO2)](#scd4x-co2-sensor)
+- [SPS30 (Particulate Matter)](#particulate-matter-sps30)
+- [SFA3x (Formaldehyde)](#formaldehyde-sfa30)
+- [SLF3S (Liquid Flow)](#liquid-flow-slf3s-xxxx)
+- [SDP3x/SDP8x (Differential Pressure)](#differential-pressure-sdp3x-sdp8x)
 
 > [!NOTE]
 >
 > **To change the sensor settings or the configuration ControlCenter needs to stop measuring. Please, click the stop button to stop the measurement.**
->    
+>
 > **An exception to this, are some of the settings of SCD30 which can be adjusted only when the measurement is running**
 
-### Humidity (SHT) 
+### Humidity (SHT)
+
 To evaluate the SHT4x you need to connect an SEK-SHT4x. Upon connecting the SHT4x you can:
 
--   Choose a custom name for the sensor which will also be displayed in the plot
--   Choose to log less data points in the range of 'every sample' to 'every 10th sample'
--   Select the additional signals for Dew Point and Absolute humidity to be shown. Selecting either of the two signals creates an additional tab with the computed signals in the plot section.
+- Choose a custom name for the sensor which will also be displayed in the plot
+- Choose to log less data points in the range of 'every sample' to 'every 10th sample'
+- Select the additional signals for Dew Point and Absolute humidity to be shown. Selecting either of the two signals creates an additional tab with the computed signals in the plot section.
 
-![](attachments/278673337/284034933.jpg ':size=40%')
+![](attachments/278673337/284034933.jpg ":size=40%")
 
 Additionally, there are a number of specific SHT4x settings regarding the heater that the user can select:
 
--   Heater power mode (High/Medium/Low)
--   Heater duration and off-time
+- Heater power mode (High/Medium/Low)
+- Heater duration and off-time
 
 For more information please refer to the [datasheet of SHT4x](https://sensirion.com/media/documents/33FD6951/639724CA/Sensirion_Datasheet_SHT4x.pdf).
 
@@ -273,18 +274,18 @@ Please Note:
 
 In case you have an SHT3x connected, you have the ability to turn on/off the ART mode on the sensor. With The ART (accelerated response time) feature activated the sensor will start acquiring data with a frequency of 4Hz. The ART feature is reset after a soft or hard reset of the sensor as well as after powering the sensor off. For more information please refer to the [datasheet of SHT3x](https://sensirion.com/media/documents/213E6A3B/61641DC3/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf).
 
-### VOC (SVM4x)
+### VOC and NOx (SVM4x)
 
 To evaluate the SGP4x you need to connect an SEK-SVM4x. Upon connecting the SVM4x you can:
 
--   Choose a custom name for the sensor which will also be displayed in the plot
--   Choose to log less data points in the range of 'every sample' to 'every 10th sample'
+- Choose a custom name for the sensor which will also be displayed in the plot
+- Choose to log less data points in the range of 'every sample' to 'every 10th sample'
 
 Below you can find how to change specific functionalities regarding the VOC Index and the NOx Index
 
 #### Changing the temperature offset
 
-![](attachments/278673337/282045591.png ':size=40%')
+![](attachments/278673337/282045591.png ":size=40%")
 
 You can change the temperature offset by entering a new value under the Device Parameters section and subsequently pressing the Apply button (1).
 
@@ -294,7 +295,7 @@ If you want the temperature offset to be saved permanently on the SVM4x press th
 
 #### Set the tuning parameters for the VOC Index
 
-![](attachments/278673337/282045589.png ':size=40%')
+![](attachments/278673337/282045589.png ":size=40%")
 
 There are different parameters which can be set by the user to influence the behavior of the VOC Algorithm. For each parameter, you can place the cursor on top of the i icon to receive more information about it (incl. default values in case you forget).
 
@@ -306,17 +307,17 @@ For more information, please, consult the application note [Sensirion's VOC Inde
 
 #### Using the memory feature for the VOC Index
 
-![](attachments/278673337/282045588.png ':size=40%')
+![](attachments/278673337/282045588.png ":size=40%")
 
 After restart, the VOC Algorithm on the SVM4x normally forgets everything which had been previously learned.
 
-By checking the box next to *Memory-Feature enabled*, the VOC Algorithm remembers previous data and avoids the situation that the algorithm needs to learn from scratch.
+By checking the box next to _Memory-Feature enabled_, the VOC Algorithm remembers previous data and avoids the situation that the algorithm needs to learn from scratch.
 
 Note: this feature must only be used for short interruptions (≤10 min). For more information, please, consult the application note [Sensirion's VOC Index for Indoor Air Applications](https://sensirion.com/media/documents/02232963/6294E043/Info_Note_VOC_Index.pdf).
 
 #### Set the tuning parameters for the NOx Index
 
-![](attachments/278673337/282045589.png ':size=40%')
+![](attachments/278673337/282045589.png ":size=40%")
 
 There are different parameters which can be set by the user to influence the behavior of the NOx Algorithm. For each parameter, you can place the
 cursor on top of the i icon to receive more information about it (incl. default values in case you forget).
@@ -327,9 +328,9 @@ If you want the tuning parameters to be saved permanently on the SVM4x press the
 
 For more information, please, consult the application note [Sensirion's NOx Index for Indoor Air Applications](https://sensirion.com/media/documents/9F289B95/6294DFFC/Info_Note_NOx_Index.pdf)
 
-#### Restarting the SVM4x with the new parameters 
+#### Restarting the SVM4x with the new parameters
 
-![](attachments/278673337/282045590.png ':size=80%')
+![](attachments/278673337/282045590.png ":size=80%")
 
 In case you need to transfer a baseline file for a specific SGP sensor to a different computer, you can find it here: C:\\Users\\\<username\>\\Local\\Sensirion\\ControlCenter with the file extension '.json'.
 
@@ -337,8 +338,8 @@ In case you need to transfer a baseline file for a specific SGP sensor to a diff
 
 To evaluate the SCD3x sensor you need to connect an SEK-SCD3x to a Sensorbridge. Upon connecting the SCD3x you can:
 
--   Choose a custom name for the sensor which will also be displayed in the plot
--   Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
+- Choose a custom name for the sensor which will also be displayed in the plot
+- Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
 
 Below you can find how to change specific functionalities regarding the ASC (Automatic Self Calibration) and FRC (Forced Recalibration) algorithms
 
@@ -356,17 +357,17 @@ For testing purposes, the FRC feature can be executed by using the Sensirion SEK
 
 1.  Connect the SCD30 to the SEK EvalKit and start the ControlCenter software.
 2.  Open the Setting dialog box of SCD30:
-3. ![](attachments/278673337/282045703.jpg ':size=40%')
+3.  ![](attachments/278673337/282045703.jpg ":size=40%")
 4.  Hit OK and confirm FRC implementation
 
-#### Applying ASC via Sensirion SEK Evaluation Kit 
+#### Applying ASC via Sensirion SEK Evaluation Kit
 
 For testing purposes, the ASC feature can be switched on  and off via the Sensirion SEK EvalKit by going through the following procedure:
 
 1.  Connect the SCD30 to the Sensorbridge and start the ControlCenter software.
 2.  Open the Setting dialog box of SCD30
 3.  Toggle the ASC setting.
-4.  ![](attachments/278673337/282045729.jpg ':size=40%')
+4.  ![](attachments/278673337/282045729.jpg ":size=40%")
 
 Please note:
 
@@ -384,8 +385,8 @@ The source of truth are always the application notes and the datasheets for the 
 
 To evaluate the SCD4x sensor you need to connect an SEK-SCD4x to a Sensorbridge. Upon connecting the SCD4x you can:
 
--   Choose a custom name for the sensor which will also be displayed in the plot
--   Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
+- Choose a custom name for the sensor which will also be displayed in the plot
+- Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
 
 The user can interact with the SCD4x the same way with the SCD3x for the ASC and FRC. Please refer to the SCD3x section for how to turn on/off the ASC and FRC through ControlCenter.
 
@@ -397,35 +398,36 @@ For ASC and FRC, ControlCenter sends the commands to the sensor and reads the st
 
 To evaluate the SPS30 sensor you need to connect an SEK-SPS30 via the supplied USB cable to the laptop. Upon connecting the SPS30 you can:
 
-![](attachments/278673337/284033249.png ':size=40%')
--   Choose a custom name for the sensor which will also be displayed in the plot
--   Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
--   Switch the auto cleaning 'on/off'
--   Choose the auto cleaning interval if auto cleaning is enabled
--   Trigger cleaning manually
+![](attachments/278673337/284033249.png ":size=40%")
 
-### Formaldehyde (SFA30) 
+- Choose a custom name for the sensor which will also be displayed in the plot
+- Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
+- Switch the auto cleaning 'on/off'
+- Choose the auto cleaning interval if auto cleaning is enabled
+- Trigger cleaning manually
+
+### Formaldehyde (SFA30)
 
 To evaluate the SFA30 sensor you need to connect an SEK-SFA30 to the measuring computer via the supplied USB to UART cable. Upon connecting the SFA30 you can:
 
--   Choose a custom name for the sensor which will also be displayed in the plot
--   Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
+- Choose a custom name for the sensor which will also be displayed in the plot
+- Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
 
 Please refer to the [datasheet](https://sensirion.com/media/documents/DEB1C6D6/61654718/Sensirion_Formaldehyde_Sensors_SFA30_Datasheet.pdf) and the [developers\' website](https://developer.sensirion.com/sensirion-products/sfa30-formaldehyde-sensor-module/) for more in depth information.
 
-### Liquid Flow (SLF3S-xxxxF)
+### Liquid Flow (SLF3S-xxxx)
 
 To evaluate the SLF3S sensor you need to connect the evaluation kit to the measuring computer via the supplied USB cable and the adapter cable as shown in the picture.
 
-![](attachments/278673337/284035152.jpg ':size=40%')
+![](attachments/278673337/284035152.jpg ":size=40%")
 
 Upon connecting the SLF3s you can:
 
--   Choose a custom name for the sensor which will also be displayed in the plot
--   Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
--   Select which type of liquid to measure by changing the calibration between water and Isopropyl Alcohol (IPA)
+- Choose a custom name for the sensor which will also be displayed in the plot
+- Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
+- Select which type of liquid to measure by changing the calibration between water and Isopropyl Alcohol (IPA)
 
-![](attachments/278673337/282045592.png ':size=40%')
+![](attachments/278673337/282045592.png ":size=40%")
 
 Please refer to the [datasheet](https://sensirion.com/media/documents/C4F8D965/63625D10/Sensirion_Datasheet_SLF3S-0600F.pdf) for more in depth information.
 
@@ -433,72 +435,75 @@ Please refer to the [datasheet](https://sensirion.com/media/documents/C4F8D965/6
 
 To evaluate the SDP3x or SDP8x sensor you need to connect an SEK-SDP3x or SEK-SDP8x to the SEK-Sensobridge via the supplied USB to RJ45 cable. Upon connecting the SDP3x/SDP8x you can:
 
--   Choose a custom name for the sensor which will also be displayed in the plot
--   Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
--   Change the temperature compensation mode from Differential Pressure to Mass flow
--   Adjust the mesurement unit
+- Choose a custom name for the sensor which will also be displayed in the plot
+- Choose to log less data points in the range of 'every sample' to 'every 1000th sample'
+- Change the temperature compensation mode from Differential Pressure to Mass flow
+- Adjust the mesurement unit
 
-![](attachments/278673337/284035201.jpg ':size=80%')
+![](attachments/278673337/284035201.jpg ":size=80%")
 
 For more information please refer to the datasheets for [SDP3x](https://sensirion.com/media/documents/4D045D69/6375F34F/DP_DS_SDP3x_digital_D1.pdf) and [SDP8x](https://sensirion.com/media/documents/90500156/6167E43B/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf).
 
-## Plots and Plot Interaction 
+## Plots and Plot Interaction
+
 The main functionality of ControlCenter is to visualize the live measurements from the different sensors. This is why the plot section is one of the most important elements of the application and our goal is to create an experience as intuitive as possible.
 
-![](attachments/278673337/284036203.jpg ':size=80%')
+![](attachments/278673337/284036203.jpg ":size=80%")
 
 Upon connecting a sensor via SensorBridge or via a dedicated cable and clicking refresh if ControlCenter is running or launching ControlCenter if it is not running the sensors are automatically identified and a set of predefined plots are generated automatically. The plots are automatically bundled based on the measurement type. For example, when connecting an SCD41 and an SHT40. We see the following plots:
 
--   CO2:
-    -   SCD41 measurements connected on port 2 of SensorBridge
+- CO2:
 
-        ![](attachments/278673337/284036400.jpg ':size=80%')
+  - SCD41 measurements connected on port 2 of SensorBridge
 
--   RHT:
-    -   Relative Humidity from the SHT4x sensor inside the SCD41
-        connected on port 2 of SensorBridge
-    -   Temperature from the SHT4x sensor inside the SCD41 connected on
-        port 2 of SensorBridge
-    -   Relative Humidity from the SHT4x sensor connected on port 1 of
-        SensorBridge
-    -   Temperature from the SHT4x sensor connected on port 1 of
-        SensorBridge
+    ![](attachments/278673337/284036400.jpg ":size=80%")
 
-        ![](attachments/278673337/284036399.jpg ':size=80%')
+- RHT:
 
-### Plot Settings 
+  - Relative Humidity from the SHT4x sensor inside the SCD41
+    connected on port 2 of SensorBridge
+  - Temperature from the SHT4x sensor inside the SCD41 connected on
+    port 2 of SensorBridge
+  - Relative Humidity from the SHT4x sensor connected on port 1 of
+    SensorBridge
+  - Temperature from the SHT4x sensor connected on port 1 of
+    SensorBridge
+
+    ![](attachments/278673337/284036399.jpg ":size=80%")
+
+### Plot Settings
 
 On each plot on the top right there is a green cogwheel where the user
 can get in the plot settings. The settings might differ slightly per
 different signal. The user can:
 
--   Toggle on/off the autoscaling
--   Adjust the time format
--   Toggle on/off the data value visualization on hovering over the data
--   Adjust the minimum range for the y axis of the plot
--   Restore the defaults
+- Toggle on/off the autoscaling
+- Adjust the time format
+- Toggle on/off the data value visualization on hovering over the data
+- Adjust the minimum range for the y axis of the plot
+- Restore the defaults
 
-![](attachments/278673337/284036412.jpg ':size=40%')
+![](attachments/278673337/284036412.jpg ":size=40%")
 
-### Plot Interaction 
+### Plot Interaction
 
 The user interaction regarding plots is very intuitive. ControlCenter
 provides a legend to help users familiarize themselves with the
 interaction when hovering over the \"?\" icon on the top left of each
 plot. The legend shown is the following:
 
-![](attachments/278673337/284036428.jpg ':size=40%')
+![](attachments/278673337/284036428.jpg ":size=40%")
 
--   By double clicking the right mouse button inside the plot area the
-    view is reset
--   Since the plotting of the measurements is live, the user is
-    restricted from going back in time on the x axis
--   Using the center mouse wheel, will zoom in/out on the y axis towards
-    the area the mouse pointer shows
--   The same functionality can be achieved by holding the right mouse
-    button and dragging up and down with the mouse
--   Moving up and down in a zoomed in plot is done by holding the left
-    mouse button and dragging up and down with the mouse
+- By double clicking the right mouse button inside the plot area the
+  view is reset
+- Since the plotting of the measurements is live, the user is
+  restricted from going back in time on the x axis
+- Using the center mouse wheel, will zoom in/out on the y axis towards
+  the area the mouse pointer shows
+- The same functionality can be achieved by holding the right mouse
+  button and dragging up and down with the mouse
+- Moving up and down in a zoomed in plot is done by holding the left
+  mouse button and dragging up and down with the mouse
 
 ## Custom Plots
 
@@ -506,74 +511,73 @@ As mentioned in earlier sections, the plots in ControlCenter are
 automatically generated to make the experience of the user as intuitive
 and easy as possible. In addition to the automatically generated plots,
 the user has the option to create custom plots by navigating to the
-custom plots section on the bottom left of the application. 
+custom plots section on the bottom left of the application.
 
-![](attachments/278673337/284036203.jpg ':size=80%')
+![](attachments/278673337/284036203.jpg ":size=80%")
 
 Upon clicking the button, a pop up window appears to create the custom
 plot. The user can select which signals from which sensors will be
 displayed on the custom plot as well and add them, as well as create a
 name for the custom plot.
 
-![](attachments/278673337/284039387.jpg ':size=70%')
+![](attachments/278673337/284039387.jpg ":size=70%")
 
 Upon creating the plot, a new tab is created with the signals of the
 custom plot stacked.
 
 Please note:
 
-The custom plot is persistent between refreshing of the sensors **but
-not **between restart of the application.
+The custom plot is persistent between refreshing of the sensors **but not** between restart of the application.
 
-## Logging and Configuration 
+## Logging and Configuration
 
 Apart from visualizing the live plots another main functionality of
 ControlCenter as an evaluation tool is to facilitate in the logging of
 the measurements for different experiments during the applications.
 
 By default, logging is enabled for all of the sensors and the logging
-starts together with the measurement. 
+starts together with the measurement.
 
 The logs are stored in EDF files. The EDF file is a proprietary
 Sensirion format modeled out of the CSV format. Therefore it is
 compatible with Microsoft Excel and other csv file handling capable
 editors.
 
-Under 'Settings'→'Application Settings', the general ControlCenter
+Under **Settings** -> **Application Settings**, the general ControlCenter
 settings can be found. Here you can:
 
--   See in which directory the log files are saved and choose a
-    different directory.
--   Choose between logging data from each connected sensor into its own
-    log file (default) and logging all data from connected sensors into
-    one single file.
--   Change the temperature between Celsius and Fahrenheit degrees
--   Adjust the Plotting line thickness
+- See in which directory the log files are saved and choose a
+  different directory.
+- Choose between logging data from each connected sensor into its own
+  log file (default) and logging all data from connected sensors into
+  one single file.
+- Change the temperature between Celsius and Fahrenheit degrees
+- Adjust the Plotting line thickness
 
-![](attachments/278673337/284039407.jpg ':size=40%')
+![](attachments/278673337/284039407.jpg ":size=40%")
 
 ## Support and Feedback
 
 A really important aspect of our mindset at Sensirion is to actively
 solve problems of our users, therefore gathering feedback and supporting
-our users is of outmost importance to us. 
+our users is of outmost importance to us.
 
 You can provide generic feedback for ControlCenter or request support
 through the feedback button located in two places in ControlCenter:
 
--   Under the help menu tab where you can also find the link to this
-    manual
--   Through the feedback button on the top right corner of the main view
-    of ControlCenter
+- Under the help menu tab where you can also find the link to this
+  manual
+- Through the feedback button on the top right corner of the main view
+  of ControlCenter
 
-![](attachments/278673337/284039415.jpg ':size=80%')
+![](attachments/278673337/284039415.jpg ":size=80%")
 
 Alternatively you can find the links also here:
 
--   [Provide
-    Feedback](https://feedback.echonovum.com/dzWvbG)
--   [Report an
-    issue](https://feedback.echonovum.com/SnbotU)
+- [Provide
+  Feedback](https://feedback.echonovum.com/dzWvbG)
+- [Report an
+  issue](https://feedback.echonovum.com/SnbotU)
 
 If you request any type of additional support please do not hesitate to
 contact us by writing a quick note to
@@ -585,7 +589,7 @@ Dataviewer is the sister tool of ControlCenter to visualize logged
 measurements. Dataviewer can recognize edf files and visualize the
 measurements in a grid of plots
 
-![](attachments/278673337/284039454.jpg ':size=80%')
+![](attachments/278673337/284039454.jpg ":size=80%")
 
 Dataviewer can be accessed as a completely separate program or can be
 launched through ControlCenter by clicking the Dataviewer Button on the
@@ -614,7 +618,7 @@ the hash character (#), the EDF format is fully compatible with CSV
 files using the \<tab\> column separator. Sensirion ControlCenter logs
 all data as EDF files.
 
-### How to open EDF files 
+### How to open EDF files
 
 Since EDF files are text files, they can be opened and viewed with any
 text editor. If you installed the latest version of Sensirion
@@ -645,25 +649,25 @@ seen here. There are several solutions to this particular problem:
 Solution 1: Import the EDF file with the Text Import Wizard. This
 solution will only affect the file you import but not any other files
 
--   Under the advanced option, you can enter \".\" for decimal separator
-    and some other symbol for the thousands separator. The thousands
-    separator doesn\'t matter because it is not used in EDF files. Just
-    make sure that it is different from the decimal separator.
--   For more information see the full description of the text import
-    wizard on the official Microsoft Office support website.
+- Under the advanced option, you can enter \".\" for decimal separator
+  and some other symbol for the thousands separator. The thousands
+  separator doesn\'t matter because it is not used in EDF files. Just
+  make sure that it is different from the decimal separator.
+- For more information see the full description of the text import
+  wizard on the official Microsoft Office support website.
 
 Solution 2: Change the settings for all Excel files
 
--   This affects all Excel files but not any other office products.
--   Follow the step-by-step solution on the official Microsoft Office
-    support page or office tooltips.
+- This affects all Excel files but not any other office products.
+- Follow the step-by-step solution on the official Microsoft Office
+  support page or office tooltips.
 
 Solution 3: Change the system settings
 
--   This changes the system default and, in turn, all applications that
-    use the system default, e.g. Excel, Word or any other program that
-    might rely on it.
--   Follow the step by step solution on office tooltips.
+- This changes the system default and, in turn, all applications that
+  use the system default, e.g. Excel, Word or any other program that
+  might rely on it.
+- Follow the step by step solution on office tooltips.
 
 ## Opening a log file
 
@@ -673,7 +677,7 @@ DataViewer is associated with this filetype or if Dataviewer is open you
 can use the \"+\" symbol on the bottom left part of the application as
 highlighted in the picture
 
-![](attachments/278673337/284039497.jpg ':size=80%')
+![](attachments/278673337/284039497.jpg ":size=80%")
 Dataviewer is split in 4 different sections:
 
 1.  Navigation panel
@@ -715,12 +719,12 @@ in on a plot adjusts the range of the timeline bar accordingly.
 All the sensors present in a measurement as well as the computed
 algorithms are shown in this panel.
 
--   By clicking the \"eye\" symbol you can hide/show the measurements
-    from a specific sensor
--   By clicking on the sensor name you can highlight the measurements
-    from this specific sensor by making them bold
+- By clicking the \"eye\" symbol you can hide/show the measurements
+  from a specific sensor
+- By clicking on the sensor name you can highlight the measurements
+  from this specific sensor by making them bold
 
-![](attachments/278673337/284039558.jpg ':size=80%')
+![](attachments/278673337/284039558.jpg ":size=80%")
 
 ## Plot Interaction
 
@@ -729,23 +733,23 @@ provides a legend to help users familiarize themselves with the
 interaction when hovering over the \"?\" icon on the top left of each
 plot. The legend shown is the following:
 
-![](attachments/278673337/284039561.jpg ':size=50%')
+![](attachments/278673337/284039561.jpg ":size=50%")
 
--   Click with the right mouse button the small \"A\" symbol on the
-    bottom left side of the plot area to reset the view
--   The same functionality can be achieved by right clicking inside the
-    plot area. The area resets to the default view
--   Zooming in a specific area of interest is done by holding the right
-    mouse button and dragging to select the specific area. 
--   Using the center mouse wheel, will zoom in/out on the y axis towards
-    the area the mouse pointer shows
--   Panning left and right across the timeline when zoomed in a plot is
-    done by holding the left mouse button and dragging left and right
-    with the mouse
+- Click with the right mouse button the small \"A\" symbol on the
+  bottom left side of the plot area to reset the view
+- The same functionality can be achieved by right clicking inside the
+  plot area. The area resets to the default view
+- Zooming in a specific area of interest is done by holding the right
+  mouse button and dragging to select the specific area.
+- Using the center mouse wheel, will zoom in/out on the y axis towards
+  the area the mouse pointer shows
+- Panning left and right across the timeline when zoomed in a plot is
+  done by holding the left mouse button and dragging left and right
+  with the mouse
 
 ## Algorithm Processing
 
-![](attachments/278673337/284039579.jpg ':size=30%')
+![](attachments/278673337/284039579.jpg ":size=30%")
 
 For SEN5x and SGP4x sensors, you can create your own custom algorithms
 for VOC and NOx index by clicking the algorithms button in the
@@ -769,6 +773,6 @@ VOC Index for Indoor Air
 Applications](https://sensirion.com/media/documents/02232963/6294E043/Info_Note_VOC_Index.pdf) and [Sensirion's NOx Index for Indoor Air
 Applications](https://sensirion.com/media/documents/9F289B95/6294DFFC/Info_Note_NOx_Index.pdf).
 
-# Appendix 
+# Appendix
 
 ## SEK Part Numbers
